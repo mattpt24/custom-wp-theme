@@ -1,0 +1,77 @@
+.page__main__wrapper {
+    margin: 0 auto;
+
+
+.page-banner__title {
+    color: white;
+    padding: 4rem;
+    background: #222;
+    text-align: center;
+    font-size: $page-title;
+    background: {
+        size: cover;
+        position: top center;
+    }
+}
+
+.page__content {
+    line-height: 2;
+    font-weight: 200;
+    padding: 2rem 0;
+}
+}
+
+
+
+#employees__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 4rem;
+
+
+    .employee__card__container {
+        transition: all .3s ease;
+        padding: 2rem;
+        border-radius: 10px;
+        border: solid 2px $clr-text2;
+        box-shadow: 0 0 10px $clr-text2;
+
+        &:hover {
+            transition: all .3s ease;
+            background: $clr-primary-faded;
+        }
+
+        &:hover > h2 {
+            transition: all .3s ease;
+            color: aqua;
+        }
+
+
+        .employee__card__start__date {
+            color: $clr-text2;
+
+            .color-txt {
+                color: $clr-primary;
+            }
+        }
+
+        .employee__card__name {
+            transition: all .3s ease;
+            color: $clr-primary;
+            font-size: $fs-med;
+        }
+
+
+        p {
+            transition: all .3s ease;
+            color: $clr-text1;
+            width: 60%;
+            margin: 1rem auto;
+        }
+
+    }
+}

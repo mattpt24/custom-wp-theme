@@ -1,0 +1,26 @@
+#error__404__container {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    .error__404__content {
+        width: 75vw;
+
+
+        .error__404__title {
+            color: $clr-primary;
+            font-size: 8rem;
+        }
+
+
+        .error__404__subtitle {
+            color: $clr-secondary;
+            margin: 1rem 0 3rem 0;
+            font-size: $fs-lrge;
+            width: 22vw;
+        }
+    }
+}

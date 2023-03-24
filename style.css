@@ -1,0 +1,305 @@
+/* 
+Theme Name: My Custom Theme
+Author: Matt Persell-Thompson
+Description: This is a custom build WP Theme
+Version: 1.0
+*/
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion) {
+  * {
+    scroll-behavior: none;
+  }
+}
+*:focus {
+  border: 1px solid orange;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  background: white;
+}
+
+/* Only allow content to be seen by screen-readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only:focus {
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  display: block;
+  clip: auto;
+  z-index: 999;
+  background-color: red;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar__container {
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+.navbar__container .nav__logo {
+  font-size: 1.4rem;
+  color: #252650;
+  font-weight: 900;
+}
+.navbar__container .nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  font-size: 1rem;
+}
+.navbar__container .nav__list .nav__link {
+  transition: all 0.3s ease;
+}
+.navbar__container .nav__list .nav__link:hover {
+  transition: all 0.3s ease;
+  color: #252650;
+}
+.navbar__container .nav__list a {
+  color: rgb(58, 58, 58);
+}
+
+.btn {
+  transition: all 0.3s ease;
+  outline: none;
+  border: solid 2px white;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.btn.btn--light {
+  background: white;
+  border-color: white;
+  color: black;
+}
+.btn.btn--light:hover {
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+.btn.btn--dark {
+  background: #252650;
+  border-color: #252650;
+  color: white;
+}
+.btn.btn--dark:hover {
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+.btn.btn--transparent {
+  background: none;
+  border-color: rgb(58, 58, 58);
+  color: rgb(58, 58, 58);
+}
+.btn.btn--transparent:hover {
+  transition: all 0.3s ease;
+  background: #252650;
+  color: white;
+}
+
+#hero {
+  min-height: 75vh;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#hero:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.585);
+  z-index: 0;
+}
+#hero .hero__content {
+  z-index: 1;
+  width: 75vw;
+  margin: 0 auto;
+}
+#hero .hero__content .hero__title {
+  font-size: 4rem;
+  color: #252650;
+  font-weight: 900;
+  width: 70%;
+}
+#hero .hero__content .hero__subtitle {
+  font-size: 1.4rem;
+  width: 50vw;
+  font-weight: 300;
+  color: rgb(58, 58, 58);
+  margin: 1rem 0 2rem 0;
+}
+#hero .hero__content .hero__btn__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer {
+  background: #252650;
+  color: white;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+#cta {
+  background: #252650;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 0;
+  position: relative;
+}
+#cta .cta__left {
+  z-index: 2;
+}
+#cta .cta__left .cta__title {
+  color: white;
+  font-size: 2.4rem;
+}
+#cta .cta__left .cta__subtitle {
+  color: rgb(195, 192, 192);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+#cta .cta__right {
+  z-index: 2;
+}
+#cta .cta__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+#cta:after {
+  content: " ";
+  background: #252650;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+#error__404__container {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#error__404__container .error__404__content {
+  width: 75vw;
+}
+#error__404__container .error__404__content .error__404__title {
+  color: #252650;
+  font-size: 8rem;
+}
+#error__404__container .error__404__content .error__404__subtitle {
+  color: orange;
+  margin: 1rem 0 3rem 0;
+  font-size: 2rem;
+  width: 22vw;
+}
+
+.page__main__wrapper {
+  margin: 0 auto;
+}
+.page__main__wrapper .page-banner__title {
+  color: white;
+  padding: 4rem;
+  background: #222;
+  text-align: center;
+  font-size: 3.5rem;
+  background-size: cover;
+  background-position: top center;
+}
+.page__main__wrapper .page__content {
+  line-height: 2;
+  font-weight: 200;
+  padding: 2rem 0;
+}
+
+#employees__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 4rem;
+}
+#employees__container .employee__card__container {
+  transition: all 0.3s ease;
+  padding: 2rem;
+  border-radius: 10px;
+  border: solid 2px rgb(195, 192, 192);
+  box-shadow: 0 0 10px rgb(195, 192, 192);
+}
+#employees__container .employee__card__container:hover {
+  transition: all 0.3s ease;
+  background: rgba(37, 38, 80, 0.5843137255);
+}
+#employees__container .employee__card__container:hover > h2 {
+  transition: all 0.3s ease;
+  color: aqua;
+}
+#employees__container .employee__card__container .employee__card__start__date {
+  color: rgb(195, 192, 192);
+}
+#employees__container .employee__card__container .employee__card__start__date .color-txt {
+  color: #252650;
+}
+#employees__container .employee__card__container .employee__card__name {
+  transition: all 0.3s ease;
+  color: #252650;
+  font-size: 1.4rem;
+}
+#employees__container .employee__card__container p {
+  transition: all 0.3s ease;
+  color: rgb(58, 58, 58);
+  width: 60%;
+  margin: 1rem auto;
+}

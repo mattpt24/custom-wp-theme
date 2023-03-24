@@ -1,0 +1,58 @@
+.btn {
+    transition: all .3s ease;
+    outline: none;
+    border: solid 2px white;
+    padding: .6rem 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: $fw-regular;
+    font-size: 1rem;
+
+
+
+
+    // LIGHT BTN
+    &.btn--light {
+        background: white;
+        border-color: white;
+        color: black;
+
+        &:hover {
+            transition: all .3s ease;
+            opacity: .6;
+        }
+    }
+
+
+
+
+
+    // DARK BTN
+    &.btn--dark {
+        background: $clr-primary;
+        border-color: $clr-primary;
+        color: white;
+
+        &:hover {
+            transition: all .3s ease;
+            opacity: .6;
+        }
+    }
+
+
+
+
+    // TRANSPARENT BTN
+    &.btn--transparent{
+        background: none;
+        border-color: $clr-text1;
+        color: $clr-text1;
+    
+
+        &:hover {
+            transition: all .3s ease;
+            background: $clr-primary;
+            color: white;
+        }
+    }
+}
