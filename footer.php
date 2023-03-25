@@ -1,7 +1,7 @@
 
 
 <footer class="site-footer">
-Copyright © <?php echo date('Y');?> Infocus Projects. All Rights Reserved.
+Copyright © <?php echo date('Y');?> Project Name. All Rights Reserved.
 </footer>
 
 <!-- WordPress Admin Bar at top of page -->
