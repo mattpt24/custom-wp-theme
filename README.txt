@@ -30,6 +30,14 @@ Setting up custom theme development enviroment ---------------------------------
 
 
 
+!!! IF USING WINDOWS !!!
+
+* Delete package-lock.json file
+* Remove 'fsevents' section from 'package.json' as this is a MacOS only function
+
+
+
+
 ///////////////////////////////////////////////////////////////////////////
 
 
