@@ -16,7 +16,7 @@
 <!-- NAVBAR -->
 <header class="site-header">
     <nav class="navbar__container">
-        <a class="nav__logo" href="<?php echo site_url()?>">CompanyName</a>
+        <a class="nav__logo" href="<?php echo site_url()?>"><?php echo get_bloginfo();?></a>
 
         <ul class="nav__list">
             <li><a class="nav__link" href="<?php echo site_url('/page-one')?>">Page 1</a></li>
